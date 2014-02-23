@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <interface id="1" language="java" name="org.gjt.sp.jedit.search.SearchFileSet" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/SearchFileSet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="174" x="2639" y="1986"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="2" language="java" name="org.gjt.sp.jedit.search.HyperSearchResults.GoToNodeAction" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchResults.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="194" x="291" y="1060"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="org.gjt.sp.jedit.search.HyperSearchResults.ActionHandler" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchResults.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="194" x="525" y="1060"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="org.gjt.sp.jedit.search.SearchBar.KeyHandler" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/SearchBar.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="160" x="332" y="579"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="org.gjt.sp.jedit.search.HyperSearchResults.MouseHandler" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchResults.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="188" x="759" y="1060"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="org.gjt.sp.jedit.search.SearchMatcher.Match" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/SearchMatcher.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="127" x="3302" y="2251"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="org.gjt.sp.jedit.search.BoyerMooreSearchMatcher" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/BoyerMooreSearchMatcher.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="352" x="3469" y="2251"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="org.gjt.sp.jedit.search.HyperSearchResults.ExpandChildTreeNodesAction" 
+    project="jEdit-5.1" file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchResults.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="194" x="987" y="1060"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="9" language="java" name="org.gjt.sp.jedit.search.HyperSearchTreeNodeCallback" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchTreeNodeCallback.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="258" x="3872" y="1986"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="10" language="java" name="org.gjt.sp.jedit.search.HyperSearchResults.ResultVisitor" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchResults.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="203" x="3033" y="1253"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="11" language="java" name="org.gjt.sp.jedit.search.HyperSearchResults.CopyToClipboardAction" 
+    project="jEdit-5.1" file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchResults.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="194" x="1221" y="1060"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="org.gjt.sp.jedit.search.SearchBar" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/SearchBar.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="174" x="645" y="206"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="org.gjt.sp.jedit.search.HyperSearchOperationNode" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchOperationNode.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="243" width="288" x="3276" y="1253"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="org.gjt.sp.jedit.search.AllBufferSet" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/AllBufferSet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="168" x="2021" y="1986"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="org.gjt.sp.jedit.search.HyperSearchResults.TreeDisplayAction" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchResults.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="194" x="1455" y="1060"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="org.gjt.sp.jedit.search.SearchDialog.MultiFileActionHandler" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/SearchDialog.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="194" x="1328" y="579"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="org.gjt.sp.jedit.search.HyperSearchResults" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchResults.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="441" width="419" x="3033" y="579"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="18" language="java" name="org.gjt.sp.jedit.search.HyperSearchNode" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchNode.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="140" x="3761" y="579"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="19" language="java" name="org.gjt.sp.jedit.search.HyperSearchResult" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchResult.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="333" width="172" x="2774" y="206"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="org.gjt.sp.jedit.search.SearchDialog" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/SearchDialog.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="261" width="263" x="1808" y="206"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="org.gjt.sp.jedit.search.HyperSearchFolderNode" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchFolderNode.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="210" x="343" y="206"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="org.gjt.sp.jedit.search.SearchBar.FocusHandler" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/SearchBar.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="163" x="532" y="579"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="org.gjt.sp.jedit.search.SearchBar.DocumentHandler" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/SearchBar.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="208" x="735" y="579"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="org.gjt.sp.jedit.search.BufferListSet" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/BufferListSet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="243" width="174" x="2318" y="1253"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="org.gjt.sp.jedit.search.HyperSearchResult.Occur" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchResult.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="125" x="2599" y="579"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="org.gjt.sp.jedit.search.CurrentBufferSet" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/CurrentBufferSet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="174" x="2532" y="1253"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="org.gjt.sp.jedit.search.SearchDialog.FocusOrder" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/SearchDialog.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="295" x="1562" y="579"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="org.gjt.sp.jedit.search.HyperSearchResults.NewSearchAction" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchResults.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="194" x="1689" y="1060"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="org.gjt.sp.jedit.search.HyperSearchResults.BufferClosedVisitor" 
+    project="jEdit-5.1" file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchResults.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="203" x="2566" y="1060"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="org.gjt.sp.jedit.search.SearchDialog.ReplaceActionHandler" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/SearchDialog.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="194" x="1897" y="579"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="org.gjt.sp.jedit.search.HyperSearchResults.HighlightingTree" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchResults.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="369" x="1923" y="1060"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="org.gjt.sp.jedit.search.HyperSearchFileNode" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchFileNode.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="225" width="167" x="4748" y="206"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="33" language="java" name="org.gjt.sp.jedit.search.PatternSearchMatcher" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/PatternSearchMatcher.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="352" x="3861" y="2251"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="34" language="java" name="org.gjt.sp.jedit.search.SearchMatcher" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/SearchMatcher.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="363" x="3469" y="1986"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="35" language="java" name="org.gjt.sp.jedit.search.HyperSearchRequest" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchRequest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="395" x="4313" y="206"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="36" language="java" name="org.gjt.sp.jedit.search.SearchBar.ActionHandler" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/SearchBar.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="194" x="983" y="579"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="37" language="java" name="org.gjt.sp.jedit.search.HyperSearchResults.RemoveAllTreeNodesAction" 
+    project="jEdit-5.1" file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchResults.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="194" x="2332" y="1060"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="38" language="java" name="org.gjt.sp.jedit.search.HyperSearchResult.GotoDelayed" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchResult.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="219" x="2774" y="579"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="39" language="java" name="org.gjt.sp.jedit.search.HyperSearchResults.KeyHandler" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchResults.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="160" x="3672" y="1060"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="40" language="java" name="org.gjt.sp.jedit.search.SearchAndReplace" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/SearchAndReplace.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="693" width="247" x="2746" y="1253"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="41" language="java" name="org.gjt.sp.jedit.search.HyperSearchResults.ResultTreeTransferHandler" 
+    project="jEdit-5.1" file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchResults.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="265" x="4170" y="1060"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="42" language="java" name="org.gjt.sp.jedit.search.HyperSearchResults.TreeNodeCallbackAdapter" 
+    project="jEdit-5.1" file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchResults.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="258" x="3374" y="1060"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="43" language="java" name="org.gjt.sp.jedit.search.BufferListSet.Direction" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/BufferListSet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="119" x="2229" y="1986"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="44" language="java" name="org.gjt.sp.jedit.search.HyperSearchResults.RedoSearchAction" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchResults.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="261" x="3073" y="1060"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="45" language="java" name="org.gjt.sp.jedit.search.HyperSearchResults.BufferLoadedVisitor" 
+    project="jEdit-5.1" file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchResults.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="203" x="2809" y="1060"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="46" language="java" name="org.gjt.sp.jedit.search.HyperSearchResults.CollapseChildTreeNodesAction" 
+    project="jEdit-5.1" file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchResults.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="198" x="4475" y="1060"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="47" language="java" name="org.gjt.sp.jedit.search.SearchDialog.ButtonActionHandler" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/SearchDialog.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="194" x="2131" y="579"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="48" language="java" name="org.gjt.sp.jedit.search.HyperSearchResults.ToStringNodes" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchResults.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="258" x="3872" y="1060"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="49" language="java" name="org.gjt.sp.jedit.search.HyperSearchResults.ResultCellRenderer.CountNodes" 
+    project="jEdit-5.1" file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchResults.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="258" x="5488" y="1253"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="50" language="java" name="org.gjt.sp.jedit.search.HyperSearchResults.ResultCellRenderer" 
+    project="jEdit-5.1" file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchResults.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="480" x="4947" y="1060"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="51" language="java" name="org.gjt.sp.jedit.search.SearchDialog.SettingsActionHandler" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/SearchDialog.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="194" x="2365" y="579"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="52" language="java" name="org.gjt.sp.jedit.search.DirectoryListSet" project="jEdit-5.1" 
+    file="/jEdit-5.1/src/org/gjt/sp/jedit/search/DirectoryListSet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="225" width="211" x="2388" y="1986"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="53" language="java" name="org.gjt.sp.jedit.search.HyperSearchResults.RemoveTreeNodeAction" 
+    project="jEdit-5.1" file="/jEdit-5.1/src/org/gjt/sp/jedit/search/HyperSearchResults.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="194" x="4713" y="1060"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <realization id="54">    
+    <end type="SOURCE" refId="45"/>    
+    <end type="TARGET" refId="10"/>  
+  </realization>  
+  <association id="55">    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="56" name="returnValue"/>      
+      <multiplicity id="57" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="58">    
+    <end type="SOURCE" refId="40" navigable="false">      
+      <attribute id="59" name="fileset"/>      
+      <multiplicity id="60" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting id="61">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="16"/>  
+  </nesting>  
+  <nesting id="62">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="5"/>  
+  </nesting>  
+  <nesting id="63">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="22"/>  
+  </nesting>  
+  <generalization id="64">    
+    <end type="SOURCE" refId="33"/>    
+    <end type="TARGET" refId="34"/>  
+  </generalization>  
+  <realization id="65">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <association id="66">    
+    <end type="SOURCE" refId="40" navigable="false">      
+      <attribute id="67" name="matcher"/>      
+      <multiplicity id="68" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="34" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting id="69">    
+    <bendpoint x="3042" y="1060"/>    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="10"/>  
+  </nesting>  
+  <nesting id="70">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="50"/>  
+  </nesting>  
+  <nesting id="71">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="48"/>  
+  </nesting>  
+  <nesting id="72">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="45"/>  
+  </nesting>  
+  <nesting id="73">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="44"/>  
+  </nesting>  
+  <generalization id="74">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="24"/>  
+  </generalization>  
+  <nesting id="75">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="37"/>  
+  </nesting>  
+  <nesting id="76">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="2"/>  
+  </nesting>  
+  <nesting id="77">    
+    <end type="SOURCE" refId="50"/>    
+    <end type="TARGET" refId="49"/>  
+  </nesting>  
+  <nesting id="78">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="47"/>  
+  </nesting>  
+  <nesting id="79">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="53"/>  
+  </nesting>  
+  <association id="80">    
+    <bendpoint x="5457" y="579"/>    
+    <bendpoint x="5457" y="1060"/>    
+    <bendpoint x="5457" y="1253"/>    
+    <end type="SOURCE" refId="35" navigable="false">      
+      <attribute id="81" name="matcher"/>      
+      <multiplicity id="82" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="34" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="83">    
+    <bendpoint x="3632" y="1253"/>    
+    <end type="SOURCE" refId="42"/>    
+    <end type="TARGET" refId="9"/>  
+  </realization>  
+  <nesting id="84">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="3"/>  
+  </nesting>  
+  <nesting id="85">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="39"/>  
+  </nesting>  
+  <realization id="86">    
+    <end type="SOURCE" refId="32"/>    
+    <end type="TARGET" refId="18"/>  
+  </realization>  
+  <nesting id="87">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="41"/>  
+  </nesting>  
+  <association id="88">    
+    <end type="SOURCE" refId="44" navigable="false">      
+      <attribute id="89" name="hyperSearchOperationNode"/>      
+      <multiplicity id="90" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting id="91">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="11"/>  
+  </nesting>  
+  <nesting id="92">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="42"/>  
+  </nesting>  
+  <realization id="93">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <association id="94">    
+    <end type="SOURCE" refId="35" navigable="false">      
+      <attribute id="95" name="results"/>      
+      <multiplicity id="96" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting id="97">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="46"/>  
+  </nesting>  
+  <nesting id="98">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="31"/>  
+  </nesting>  
+  <nesting id="99">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="51"/>  
+  </nesting>  
+  <association id="100">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="101" name="next"/>      
+      <multiplicity id="102" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting id="103">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="30"/>  
+  </nesting>  
+  <nesting id="104">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="43"/>  
+  </nesting>  
+  <nesting id="105">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="29"/>  
+  </nesting>  
+  <nesting id="106">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="4"/>  
+  </nesting>  
+  <nesting id="107">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="27"/>  
+  </nesting>  
+  <association id="108">    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="109" name="viewHash"/>      
+      <multiplicity id="110" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting id="111">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="25"/>  
+  </nesting>  
+  <nesting id="112">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="38"/>  
+  </nesting>  
+  <nesting id="113">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="15"/>  
+  </nesting>  
+  <generalization id="114">    
+    <end type="SOURCE" refId="52"/>    
+    <end type="TARGET" refId="24"/>  
+  </generalization>  
+  <association id="115">    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="116" name="focusOrder"/>      
+      <multiplicity id="117" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="27" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="118">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="119" name="searchMatcher"/>      
+      <multiplicity id="120" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="34" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting id="121">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="36"/>  
+  </nesting>  
+  <association id="122">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="123" name="occur"/>      
+      <multiplicity id="124" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="125">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="18"/>  
+  </realization>  
+  <realization id="126">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="10"/>  
+  </realization>  
+  <nesting id="127">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="8"/>  
+  </nesting>  
+  <nesting id="128">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="6"/>  
+  </nesting>  
+  <realization id="129">    
+    <end type="SOURCE" refId="49"/>    
+    <end type="TARGET" refId="9"/>  
+  </realization>  
+  <realization id="130">    
+    <bendpoint x="3881" y="1253"/>    
+    <end type="SOURCE" refId="48"/>    
+    <end type="TARGET" refId="9"/>  
+  </realization>  
+  <nesting id="131">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="28"/>  
+  </nesting>  
+  <generalization id="132">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="34"/>  
+  </generalization>  
+  <nesting id="133">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="23"/>  
+  </nesting>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="false" static="true"/>    
+    <operations public="true" package="true" protected="true" private="false" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
