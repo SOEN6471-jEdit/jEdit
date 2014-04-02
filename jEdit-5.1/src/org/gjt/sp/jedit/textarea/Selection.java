@@ -26,7 +26,11 @@ package org.gjt.sp.jedit.textarea;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.gjt.sp.jedit.Buffer;
+import org.gjt.sp.jedit.View;
 import org.gjt.sp.jedit.buffer.JEditBuffer;
+import org.gjt.sp.jedit.search.Replace;
+import org.gjt.sp.jedit.search.SearchMatcher;
 import org.gjt.sp.util.StandardUtilities;
 //}}}
 
@@ -204,6 +208,12 @@ public abstract class Selection implements Cloneable
 	 */
 	abstract boolean contentRemoved(JEditBuffer buffer, int startLine, int start,
 		int numLines, int length);
+	
+	public int replaceInSelection(View view, TextArea textArea,
+			Buffer buffer, SearchMatcher matcher, boolean smartCaseReplace) throws Exception {
+		throw new RuntimeException("Unsupported: " + this);
+	}
+	
 	//}}}
 
 	//{{{ Range class
@@ -344,6 +354,28 @@ public abstract class Selection implements Cloneable
 			return changed;
 		} //}}}
 
+		//{{{ replaceInSelection() method
+		public int replaceInSelection(View view, TextArea textArea,
+			Buffer buffer, SearchMatcher matcher, boolean smartCaseReplace) throws Exception
+		{
+			/* if an occurence occurs at the
+			beginning of the selection, the
+			selection start will get moved.
+			this sucks, so we hack to avoid it. */
+			int start = getStart();
+
+			int returnValue;
+
+			returnValue = Replace._replace(view,buffer,matcher,
+				getStart(),getEnd(),
+				smartCaseReplace);
+
+			textArea.removeFromSelection(this);
+			textArea.addToSelection(new Selection.Range(
+				start,getEnd()));
+			
+			return returnValue;
+		} //}}}		
 		//}}}
 	} //}}}
 
@@ -762,6 +794,36 @@ public abstract class Selection implements Cloneable
 				return buffer.getLineStartOffset(line) + returnValue;
 		} //}}}
 
+		//{{{ replaceInSelection() method
+		public int replaceInSelection(View view, TextArea textArea,
+			Buffer buffer, SearchMatcher matcher, boolean smartCaseReplace) throws Exception
+		{
+			/* if an occurence occurs at the
+			beginning of the selection, the
+			selection start will get moved.
+			this sucks, so we hack to avoid it. */
+			int start = getStart();
+
+			int returnValue;
+
+			int startCol = getStartColumn(
+				buffer);
+			int endCol = getEndColumn(
+				buffer);
+
+			returnValue = 0;
+			for(int j = getStartLine(); j <= getEndLine(); j++)
+			{
+				returnValue += Replace._replace(view,buffer,matcher,
+					getColumnOnOtherLine(buffer,j,startCol),
+					getColumnOnOtherLine(buffer,j,endCol),
+					smartCaseReplace);
+			}
+			textArea.addToSelection(new Selection.Rect(
+				start,getEnd()));
+
+			return returnValue;
+		} //}}}			
 		//}}}
 	} //}}}
 }
