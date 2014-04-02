@@ -61,7 +61,7 @@ class SettingsReloader
 		}
 
 		// XXX: does this really belong here?
-		SearchFileSet fileset = SearchAndReplace.getSearchFileSet();
+		SearchFileSet fileset = Search.getSearchFileSet();
 		if(fileset instanceof DirectoryListSet)
 		{
 			DirectoryListSet dirset = (DirectoryListSet)fileset;

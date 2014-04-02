@@ -990,7 +990,7 @@ public class VFSBrowser extends JPanel implements DefaultFocusComponent,
 			path = MiscUtilities.getParentOfPath(path);
 		}
 
-		SearchAndReplace.setSearchFileSet(new DirectoryListSet(
+		Search.setSearchFileSet(new DirectoryListSet(
 			path,filter,true));
 		SearchDialog.showSearchDialog(view,null,SearchDialog.DIRECTORY);
 	} //}}}

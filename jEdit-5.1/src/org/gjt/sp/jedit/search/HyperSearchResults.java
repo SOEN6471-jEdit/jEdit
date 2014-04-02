@@ -463,7 +463,7 @@ public class HyperSearchResults extends JPanel implements DefaultFocusComponent
 	//{{{ trimSearchString() method
 	private static String trimSearchString()
 	{
-		String s = SearchAndReplace.getSearchString();
+		String s = Search.getSearchString();
 		int length = jEdit.getIntegerProperty("hypersearch.displayQueryLength", 100);
 		if (s.length() > length)
 		{
@@ -776,10 +776,10 @@ public class HyperSearchResults extends JPanel implements DefaultFocusComponent
 			HyperSearchFolderNode nodeObj = (HyperSearchFolderNode)operNode.getUserObject();
 
 			String glob = "*";
-			SearchFileSet dirList = SearchAndReplace.getSearchFileSet();
+			SearchFileSet dirList = Search.getSearchFileSet();
 			if (dirList instanceof DirectoryListSet)
 				glob = ((DirectoryListSet)dirList).getFileFilter();
-			SearchAndReplace.setSearchFileSet(new DirectoryListSet(
+			Search.setSearchFileSet(new DirectoryListSet(
 					nodeObj.getNodeFile().getAbsolutePath(),glob,true));
 			SearchDialog.showSearchDialog(view,null,SearchDialog.DIRECTORY);
 		}
@@ -888,10 +888,10 @@ public class HyperSearchResults extends JPanel implements DefaultFocusComponent
 		@Override
 		public void actionPerformed(ActionEvent e)
 		{
-			SearchAndReplace.setSearchString(hyperSearchOperationNode.getSearchString());
-			SearchAndReplace.setSearchMatcher(hyperSearchOperationNode.getSearchMatcher());
+			Search.setSearchString(hyperSearchOperationNode.getSearchString());
+			Search.setSearchMatcher(hyperSearchOperationNode.getSearchMatcher());
 			removeSelectedNode();
-			SearchAndReplace.hyperSearch(view, false);
+			Search.hyperSearch(view, false);
 		}
 	} //}}}
 

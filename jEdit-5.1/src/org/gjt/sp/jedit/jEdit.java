@@ -62,7 +62,7 @@ import org.gjt.sp.jedit.gui.*;
 import org.gjt.sp.jedit.help.HelpViewer;
 import org.gjt.sp.jedit.io.*;
 import org.gjt.sp.jedit.pluginmgr.PluginManager;
-import org.gjt.sp.jedit.search.SearchAndReplace;
+import org.gjt.sp.jedit.search.Search;
 import org.gjt.sp.jedit.syntax.Chunk;
 import org.gjt.sp.jedit.syntax.ModeProvider;
 import org.gjt.sp.jedit.syntax.TokenMarker;
@@ -512,7 +512,7 @@ public class jEdit
 			keymapMigration.migrate();
 		}
 
-		SearchAndReplace.load();
+		Search.load();
 
 		if(loadPlugins)
 		{
@@ -2840,7 +2840,7 @@ public class jEdit
 		FavoritesVFS.saveFavorites();
 		HistoryModel.saveHistory();
 		Registers.saveRegisters();
-		SearchAndReplace.save();
+		Search.save();
 		BufferHistory.save();
 		KillRing.getInstance().save();
 
