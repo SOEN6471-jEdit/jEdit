@@ -496,9 +496,7 @@ public class View extends JFrame implements InputHandlerProvider
 				}
 
 				HistoryModel.getModel("find").addItem(text);
-				SearchAndReplace.setSearchString(text);
-				SearchAndReplace.setSearchFileSet(new CurrentBufferSet());
-				SearchAndReplace.hyperSearch(this);
+				SearchAndReplace.performHyperSearch(text, new CurrentBufferSet(), this);
 
 				return;
 			}
