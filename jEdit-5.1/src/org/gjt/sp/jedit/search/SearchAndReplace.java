@@ -24,18 +24,35 @@
 package org.gjt.sp.jedit.search;
 
 //{{{ Imports
-import org.gjt.sp.jedit.bsh.*;
-import java.awt.*;
+import java.awt.Component;
+import java.awt.Dialog;
+import java.awt.Frame;
 import java.util.regex.Pattern;
+
 import javax.swing.JOptionPane;
-import org.gjt.sp.jedit.*;
+
+import org.gjt.sp.jedit.BeanShell;
+import org.gjt.sp.jedit.Buffer;
+import org.gjt.sp.jedit.EditBus;
+import org.gjt.sp.jedit.GUIUtilities;
+import org.gjt.sp.jedit.Macros;
+import org.gjt.sp.jedit.TextUtilities;
+import org.gjt.sp.jedit.View;
+import org.gjt.sp.jedit.jEdit;
+import org.gjt.sp.jedit.bsh.BshMethod;
+import org.gjt.sp.jedit.bsh.NameSpace;
 import org.gjt.sp.jedit.buffer.JEditBuffer;
 import org.gjt.sp.jedit.gui.TextAreaDialog;
 import org.gjt.sp.jedit.msg.PositionChanging;
 import org.gjt.sp.jedit.msg.SearchSettingsChanged;
-import org.gjt.sp.jedit.textarea.*;
+import org.gjt.sp.jedit.textarea.JEditTextArea;
+import org.gjt.sp.jedit.textarea.Selection;
 import org.gjt.sp.jedit.textarea.TextArea;
-import org.gjt.sp.util.*;
+import org.gjt.sp.util.Log;
+import org.gjt.sp.util.ReverseCharSequence;
+import org.gjt.sp.util.StandardUtilities;
+import org.gjt.sp.util.TaskManager;
+import org.gjt.sp.util.ThreadUtilities;
 //}}}
 
 /**
@@ -374,6 +391,13 @@ public class SearchAndReplace
 
 	//{{{ Actions
 
+	public static boolean performHyperSearch(String search,
+		SearchFileSet fileSet, View view) 
+		{
+	setSearchString(search);
+	setSearchFileSet(fileSet);
+	return hyperSearch(view);
+		}
 	//{{{ hyperSearch() method
 	/**
 	 * Performs a HyperSearch.
