@@ -404,7 +404,7 @@ public class SearchAndReplace
 	 * @param view The view
 	 * @since jEdit 2.7pre3
 	 */
-	public static boolean hyperSearch(View view)
+	private static boolean hyperSearch(View view)
 	{
 		return hyperSearch(view,false);
 	} //}}}

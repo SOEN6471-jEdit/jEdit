@@ -25,8 +25,10 @@ package org.gjt.sp.jedit.search;
 //{{{ Imports
 import java.awt.event.*;
 import java.awt.*;
+
 import javax.swing.event.*;
 import javax.swing.*;
+
 import org.gjt.sp.jedit.*;
 import org.gjt.sp.jedit.syntax.SyntaxStyle;
 import org.gjt.sp.jedit.gui.*;
@@ -215,9 +217,8 @@ public class SearchBar extends JToolBar
 			else
 				find.setText(null);
 
-			SearchAndReplace.setSearchString(text);
-			SearchAndReplace.setSearchFileSet(new CurrentBufferSet());
-			SearchAndReplace.hyperSearch(view);
+			SearchAndReplace.performHyperSearch(text, new CurrentBufferSet(), view);
+
 		} //}}}
 		//{{{ Incremental search
 		else
