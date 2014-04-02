@@ -30,8 +30,8 @@ public class Replace {
 	 */
 	private static void initReplace() throws Exception
 	{
-		String replace = SearchAndReplace.getReplaceString();
-		if(SearchAndReplace.getBeanShellReplace() && replace.length() != 0)
+		String replace = Search.getReplaceString();
+		if(Search.getBeanShellReplace() && replace.length() != 0)
 		{
 			String text;
 			if( replace.trim().startsWith( "{" ) )
@@ -161,7 +161,7 @@ loop:	for(int counter = 0; ; counter++)
 		throws Exception
 	{
 		String subst = replaceOne(view,buffer,occur,found);
-		if(smartCaseReplace && SearchAndReplace.getIgnoreCase())
+		if(smartCaseReplace && Search.getIgnoreCase())
 		{
 			int strCase = TextUtilities.getStringCase(found);
 			if(strCase == TextUtilities.LOWER_CASE)
@@ -191,7 +191,7 @@ loop:	for(int counter = 0; ; counter++)
 		SearchMatcher.Match occur, CharSequence found)
 		throws Exception
 	{
-		if(SearchAndReplace.getRegexp())
+		if(Search.getRegexp())
 		{
 			if(replaceMethod != null)
 				return regexpBeanShellReplace(view,buffer,occur);
@@ -203,7 +203,7 @@ loop:	for(int counter = 0; ; counter++)
 			if(replaceMethod != null)
 				return literalBeanShellReplace(view,buffer,found);
 			else
-				return SearchAndReplace.getReplaceString();
+				return Search.getReplaceString();
 		}
 	} //}}}
 
@@ -241,7 +241,7 @@ loop:	for(int counter = 0; ; counter++)
 		CharSequence found) throws Exception
 	{
 		StringBuilder buf = new StringBuilder();
-		String replace = SearchAndReplace.getReplaceString();
+		String replace = Search.getReplaceString();
 
 		for(int i = 0; i < replace.length(); i++)
 		{
@@ -383,7 +383,7 @@ loop:	for(int counter = 0; ; counter++)
 		if(!buffer.isEditable())
 			return false;
 	
-		boolean smartCaseReplace = SearchAndReplace.getSmartCaseReplace();
+		boolean smartCaseReplace = Search.getSmartCaseReplace();
 	
 		Selection[] selection = textArea.getSelection();
 		if (selection.length == 0)
@@ -392,7 +392,7 @@ loop:	for(int counter = 0; ; counter++)
 			return false;
 		}
 	
-		SearchAndReplace.record(view,"replace(view)",true,false);
+		Search.record(view,"replace(view)",true,false);
 	
 		// a little hack for reverse replace and find
 		int caret = textArea.getCaretPosition();
@@ -404,7 +404,7 @@ loop:	for(int counter = 0; ; counter++)
 		{
 			buffer.beginCompoundEdit();
 	
-			SearchMatcher matcher = SearchAndReplace.getSearchMatcher();
+			SearchMatcher matcher = Search.getSearchMatcher();
 			if(matcher == null)
 				return false;
 	
@@ -420,7 +420,7 @@ loop:	for(int counter = 0; ; counter++)
 					buffer,matcher,smartCaseReplace,s);
 			}
 			
-			if(SearchAndReplace.getReverseSearch())
+			if(Search.getReverseSearch())
 			{
 				// so that Replace and Find continues from
 				// the right location
@@ -452,7 +452,7 @@ loop:	for(int counter = 0; ; counter++)
 		}
 		catch(Exception e)
 		{
-			SearchAndReplace.handleError(comp,e);
+			Search.handleError(comp,e);
 		}
 		finally
 		{
@@ -477,24 +477,24 @@ loop:	for(int counter = 0; ; counter++)
 		if(comp == null)
 			comp = view;
 
-		SearchFileSet fileset = SearchAndReplace.getSearchFileSet();
+		SearchFileSet fileset = Search.getSearchFileSet();
 		if(fileset.getFileCount(view) == 0)
 		{
 			GUIUtilities.error(comp,"empty-fileset",null);
 			return false;
 		}
 
-		SearchAndReplace.record(view,"replaceAll(view)",true,true);
+		Search.record(view,"replaceAll(view)",true,true);
 
 		view.showWaitCursor();
 
-		boolean smartCaseReplace = SearchAndReplace.getSmartCaseReplace();
+		boolean smartCaseReplace = Search.getSmartCaseReplace();
 
 		int fileCount = 0;
 		int occurCount = 0;
 		try
 		{
-			SearchMatcher matcher = SearchAndReplace.getSearchMatcher();
+			SearchMatcher matcher = Search.getSearchMatcher();
 			if(matcher == null)
 				return false;
 
@@ -560,7 +560,7 @@ loop:		while(path != null)
 		}
 		catch(Exception e)
 		{
-			SearchAndReplace.handleError(comp,e);
+			Search.handleError(comp,e);
 		}
 		finally
 		{

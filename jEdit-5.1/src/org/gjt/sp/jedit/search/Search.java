@@ -62,7 +62,7 @@ import org.gjt.sp.util.*;
  * @author John Gellene (API documentation)
  * @version $Id: SearchAndReplace.java 22949 2013-04-23 18:53:15Z thomasmey $
  */
-public class SearchAndReplace
+public class Search
 {
 	//{{{ Getters and setters
 
@@ -73,10 +73,10 @@ public class SearchAndReplace
 	 */
 	public static void setSearchString(String search)
 	{
-		if(search.equals(SearchAndReplace.search))
+		if(search.equals(Search.search))
 			return;
 
-		SearchAndReplace.search = search;
+		Search.search = search;
 		matcher = null;
 
 		EditBus.send(new SearchSettingsChanged(null));
@@ -98,10 +98,10 @@ public class SearchAndReplace
 	 */
 	public static void setReplaceString(String replace)
 	{
-		if(replace.equals(SearchAndReplace.replace))
+		if(replace.equals(Search.replace))
 			return;
 
-		SearchAndReplace.replace = replace;
+		Search.replace = replace;
 
 		EditBus.send(new SearchSettingsChanged(null));
 	} //}}}
@@ -124,10 +124,10 @@ public class SearchAndReplace
 	 */
 	public static void setWholeWord(boolean wholeWord)
 	{
-		if(wholeWord == SearchAndReplace.wholeWord)
+		if(wholeWord == Search.wholeWord)
 			return;
 
-		SearchAndReplace.wholeWord = wholeWord;
+		Search.wholeWord = wholeWord;
 		matcher = null;
 
 		EditBus.send(new SearchSettingsChanged(null));
@@ -141,10 +141,10 @@ public class SearchAndReplace
 	 */
 	public static void setIgnoreCase(boolean ignoreCase)
 	{
-		if(ignoreCase == SearchAndReplace.ignoreCase)
+		if(ignoreCase == Search.ignoreCase)
 			return;
 
-		SearchAndReplace.ignoreCase = ignoreCase;
+		Search.ignoreCase = ignoreCase;
 		matcher = null;
 
 		EditBus.send(new SearchSettingsChanged(null));
@@ -181,10 +181,10 @@ public class SearchAndReplace
 	 */
 	public static void setRegexp(boolean regexp)
 	{
-		if(regexp == SearchAndReplace.regexp)
+		if(regexp == Search.regexp)
 			return;
 
-		SearchAndReplace.regexp = regexp;
+		Search.regexp = regexp;
 		if(regexp && reverse)
 			reverse = false;
 
@@ -214,10 +214,10 @@ public class SearchAndReplace
 	 */
 	public static void setReverseSearch(boolean reverse)
 	{
-		if(reverse == SearchAndReplace.reverse)
+		if(reverse == Search.reverse)
 			return;
 
-		SearchAndReplace.reverse = reverse;
+		Search.reverse = reverse;
 
 		EditBus.send(new SearchSettingsChanged(null));
 	} //}}}
@@ -241,10 +241,10 @@ public class SearchAndReplace
 	 */
 	public static void setBeanShellReplace(boolean beanshell)
 	{
-		if(beanshell == SearchAndReplace.beanshell)
+		if(beanshell == Search.beanshell)
 			return;
 
-		SearchAndReplace.beanshell = beanshell;
+		Search.beanshell = beanshell;
 
 		EditBus.send(new SearchSettingsChanged(null));
 	} //}}}
@@ -269,10 +269,10 @@ public class SearchAndReplace
 	 */
 	public static void setAutoWrapAround(boolean wrap)
 	{
-		if(wrap == SearchAndReplace.wrap)
+		if(wrap == Search.wrap)
 			return;
 
-		SearchAndReplace.wrap = wrap;
+		Search.wrap = wrap;
 
 		EditBus.send(new SearchSettingsChanged(null));
 	} //}}}
@@ -296,7 +296,7 @@ public class SearchAndReplace
 	 */
 	public static void setSearchMatcher(SearchMatcher matcher)
 	{
-		SearchAndReplace.matcher = matcher;
+		Search.matcher = matcher;
 
 		EditBus.send(new SearchSettingsChanged(null));
 	} //}}}
@@ -340,7 +340,7 @@ public class SearchAndReplace
 	 */
 	public static void setSearchFileSet(SearchFileSet fileset)
 	{
-		SearchAndReplace.fileset = fileset;
+		Search.fileset = fileset;
 
 		EditBus.send(new SearchSettingsChanged(null));
 	} //}}}
@@ -793,7 +793,7 @@ loop:		for(;;)
 	//{{{ handleError() method
 	static void handleError(Component comp, Exception e)
 	{
-		Log.log(Log.ERROR,SearchAndReplace.class,e);
+		Log.log(Log.ERROR,Search.class,e);
 		if(comp instanceof Dialog)
 		{
 			new TextAreaDialog((Dialog)comp,
