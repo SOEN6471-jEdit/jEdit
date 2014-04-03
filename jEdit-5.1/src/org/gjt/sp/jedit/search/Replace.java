@@ -205,16 +205,39 @@ loop:	for(int counter = 0; ; counter++)
 
 		for(int i = 0; i < replace.length(); i++)
 		{
+			i = processCharacterInReplaceString(occur, found, i, replace, buf);
+		}
+
+		return buf.toString();
+	} //}}}	
+	
+	//{{{ processCharacterInReplaceString() method
+	private static int processCharacterInReplaceString(SearchMatcher.Match occur, CharSequence found, int i, String replace, StringBuilder buf) {
 			char ch = replace.charAt(i);
 			switch(ch)
 			{
 			case '$':
+			i = processDollarCharacterInReplaceString(occur, found, i, replace, buf, ch);
+			break;
+		case '\\':
+			i = processBackSlashCharacterInReplaceString(i, replace, buf, ch);
+			break;
+		default:
+			buf.append(ch);
+			break;
+		}
+		
+		return i;
+	} //}}}
+
+	//{{{ processDollarCharacterInReplaceString() method
+	private static int processDollarCharacterInReplaceString (SearchMatcher.Match occur, CharSequence found, int i, String replace, StringBuilder buf, char ch) { 
 				if(i == replace.length() - 1)
 				{
 					// last character of the replace string, 
 					// it is not a capturing group
 					buf.append(ch);
-					break;
+			return i;
 				}
 
 				ch = replace.charAt(++i);
@@ -245,7 +268,7 @@ loop:	for(int counter = 0; ; counter++)
 							// a digit, going back and
 							// end loop
 							i--;
-							break;
+					return i;
 						}
 					}
 					if(n < occur
@@ -257,12 +280,16 @@ loop:	for(int counter = 0; ; counter++)
 							buf.append(subs);
 					}
 				}
-				break;
-			case '\\':
+		
+		return i;
+	} //}}}
+	
+	//{{{ processDollarCharacterInReplaceString() method
+	private static int processBackSlashCharacterInReplaceString (int i, String replace, StringBuilder buf, char ch) {
 				if(i == replace.length() - 1)
 				{
 					buf.append('\\');
-					break;
+			return i;
 				}
 				ch = replace.charAt(++i);
 				switch(ch)
@@ -277,14 +304,8 @@ loop:	for(int counter = 0; ; counter++)
 					buf.append(ch);
 					break;
 				}
-				break;
-			default:
-				buf.append(ch);
-				break;
-			}
-		}
 
-		return buf.toString();
+		return i;
 	} //}}}	
 
 	//{{{ literalBeanShellReplace() method
