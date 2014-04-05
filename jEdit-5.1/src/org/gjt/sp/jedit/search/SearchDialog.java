@@ -136,9 +136,9 @@ public class SearchDialog extends EnhancedDialog
 		{
 			if(searchString.indexOf('\n') == -1)
 			{
-				if(SearchAndReplace.getRegexp())
+				if(Search.getRegexp())
 				{
-					find.setText(SearchAndReplace.escapeRegexp(
+					find.setText(Search.escapeRegexp(
 						searchString,true));
 				}
 				else
@@ -174,7 +174,7 @@ public class SearchDialog extends EnhancedDialog
 		}
 		else if(searchIn == DIRECTORY)
 		{
-			SearchFileSet fileset = SearchAndReplace.getSearchFileSet();
+			SearchFileSet fileset = Search.getSearchFileSet();
 
 			if(fileset instanceof DirectoryListSet)
 			{
@@ -212,13 +212,13 @@ public class SearchDialog extends EnhancedDialog
 
 			if(hyperSearch.isSelected() || searchSelection.isSelected())
 			{
-				if(SearchAndReplace.hyperSearch(view,
+				if(Search.hyperSearch(view,
 					searchSelection.isSelected()))
 					closeOrKeepDialog();
 			}
 			else
 			{
-				if(SearchAndReplace.find(view))
+				if(Search.find(view))
 					closeOrKeepDialog();
 				else
 				{
@@ -796,11 +796,11 @@ public class SearchDialog extends EnhancedDialog
 			// prevents us from handling SearchSettingsChanged
 			// as a result of below
 			saving = true;
-			SearchAndReplace.setWholeWord(wholeWord.isSelected());
-			SearchAndReplace.setIgnoreCase(ignoreCase.isSelected());
-			SearchAndReplace.setRegexp(regexp.isSelected());
-			SearchAndReplace.setReverseSearch(searchBack.isSelected());
-			SearchAndReplace.setAutoWrapAround(wrap.isSelected());
+			Search.setWholeWord(wholeWord.isSelected());
+			Search.setIgnoreCase(ignoreCase.isSelected());
+			Search.setRegexp(regexp.isSelected());
+			Search.setReverseSearch(searchBack.isSelected());
+			Search.setAutoWrapAround(wrap.isSelected());
 			jEdit.setBooleanProperty("search.subdirs.toggle", searchSubDirectories.isSelected());
 			jEdit.setBooleanProperty("search.skipHidden.toggle", skipHidden.isSelected());
 			jEdit.setBooleanProperty("search.skipBinary.toggle", skipBinaryFiles.isSelected());
@@ -810,7 +810,7 @@ public class SearchDialog extends EnhancedDialog
 			if(filter.length() == 0)
 				filter = "*";
 
-			SearchFileSet fileset = SearchAndReplace.getSearchFileSet();
+			SearchFileSet fileset = Search.getSearchFileSet();
 
 			boolean recurse = searchSubDirectories.isSelected();
 
@@ -873,10 +873,10 @@ public class SearchDialog extends EnhancedDialog
 			jEdit.setBooleanProperty("search.keepDialog.toggle",
 				keepDialog.isSelected());
 
-			SearchAndReplace.setSearchFileSet(fileset);
+			Search.setSearchFileSet(fileset);
 
 			replace.addCurrentToHistory();
-			SearchAndReplace.setReplaceString(replace.getText());
+			Search.setReplaceString(replace.getText());
 
 			if(find.getText().length() == 0)
 			{
@@ -886,7 +886,7 @@ public class SearchDialog extends EnhancedDialog
 			}
 
 			find.addCurrentToHistory();
-			SearchAndReplace.setSearchString(find.getText());
+			Search.setSearchString(find.getText());
 
 			return true;
 		}
@@ -923,17 +923,17 @@ public class SearchDialog extends EnhancedDialog
 	//{{{ load() method
 	private void load()
 	{
-		wholeWord.setSelected(SearchAndReplace.getWholeWord());
-		ignoreCase.setSelected(SearchAndReplace.getIgnoreCase());
-		regexp.setSelected(SearchAndReplace.getRegexp());
-		wrap.setSelected(SearchAndReplace.getAutoWrapAround());
+		wholeWord.setSelected(Search.getWholeWord());
+		ignoreCase.setSelected(Search.getIgnoreCase());
+		regexp.setSelected(Search.getRegexp());
+		wrap.setSelected(Search.getAutoWrapAround());
 
-		if(SearchAndReplace.getReverseSearch())
+		if(Search.getReverseSearch())
 			searchBack.setSelected(true);
 		else
 			searchForward.setSelected(true);
 
-		if(SearchAndReplace.getBeanShellReplace())
+		if(Search.getBeanShellReplace())
 		{
 			replace.setModel("replace.script");
 			beanShellReplace.setSelected(true);
@@ -944,7 +944,7 @@ public class SearchDialog extends EnhancedDialog
 			stringReplace.setSelected(true);
 		}
 
-		SearchFileSet fileset = SearchAndReplace.getSearchFileSet();
+		SearchFileSet fileset = Search.getSearchFileSet();
 
 		HistoryModel model = filter.getModel();
 		if(model.getSize() != 0)
@@ -997,7 +997,7 @@ public class SearchDialog extends EnhancedDialog
 			replace.setModel(beanShellReplace.isSelected()
 				? "replace.script"
 				: "replace");
-			SearchAndReplace.setBeanShellReplace(
+			Search.setBeanShellReplace(
 				beanShellReplace.isSelected());
 		}
 	} //}}}
@@ -1084,12 +1084,12 @@ public class SearchDialog extends EnhancedDialog
 			else if (source == replaceBtn)
 			{
 				save(false);
-				SearchAndReplace.replace(view);
+				Search.replace(view);
 			}
 			else if(source == replaceAndFindBtn)
 			{
 				save(false);
-				if(SearchAndReplace.replace(view))
+				if(Search.replace(view))
 					ok();
 				else
 					getToolkit().beep();
@@ -1115,14 +1115,14 @@ public class SearchDialog extends EnhancedDialog
 
 				if(searchSelection.isSelected())
 				{
-					if(SearchAndReplace.replace(view))
+					if(Search.replace(view))
 						closeOrKeepDialog();
 					else
 						getToolkit().beep();
 				}
 				else
 				{
-					if(SearchAndReplace.replaceAll(view))
+					if(Search.replaceAll(view))
 						closeOrKeepDialog();
 					else
 						getToolkit().beep();

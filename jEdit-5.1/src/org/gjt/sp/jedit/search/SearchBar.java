@@ -25,8 +25,10 @@ package org.gjt.sp.jedit.search;
 //{{{ Imports
 import java.awt.event.*;
 import java.awt.*;
+
 import javax.swing.event.*;
 import javax.swing.*;
+
 import org.gjt.sp.jedit.*;
 import org.gjt.sp.jedit.syntax.SyntaxStyle;
 import org.gjt.sp.jedit.gui.*;
@@ -150,9 +152,9 @@ public class SearchBar extends JToolBar
 	//{{{ update() method
 	public void update()
 	{
-		ignoreCase.setSelected(SearchAndReplace.getIgnoreCase());
-		regexp.setSelected(SearchAndReplace.getRegexp());
-		wholeWord.setSelected(SearchAndReplace.getWholeWord());
+		ignoreCase.setSelected(Search.getIgnoreCase());
+		regexp.setSelected(Search.getRegexp());
+		wholeWord.setSelected(Search.getWholeWord());
 		hyperSearch.setSelected(jEdit.getBooleanProperty(
 			"view.search.hypersearch.toggle"));
 	} //}}}
@@ -215,9 +217,8 @@ public class SearchBar extends JToolBar
 			else
 				find.setText(null);
 
-			SearchAndReplace.setSearchString(text);
-			SearchAndReplace.setSearchFileSet(new CurrentBufferSet());
-			SearchAndReplace.hyperSearch(view);
+			Search.performHyperSearch(text, new CurrentBufferSet(), view);
+
 		} //}}}
 		//{{{ Incremental search
 		else
@@ -271,14 +272,14 @@ public class SearchBar extends JToolBar
 		 * This can be annoying if you have just done an
 		 * incremental search and want the next occurrence
 		 * in the current buffer. */
-		SearchAndReplace.setSearchFileSet(new CurrentBufferSet());
-		SearchAndReplace.setSearchString(find.getText());
-		SearchAndReplace.setReverseSearch(reverse);
+		Search.setSearchFileSet(new CurrentBufferSet());
+		Search.setSearchString(find.getText());
+		Search.setReverseSearch(reverse);
 
 		boolean ret = false;
 		try
 		{
-			if(SearchAndReplace.find(view,view.getBuffer(),start,false,reverse))
+			if(Search.find(view,view.getBuffer(),start,false,reverse))
 				ret = true;
 		}
 		catch(Exception e)
@@ -366,17 +367,17 @@ public class SearchBar extends JToolBar
 			}
 			else if(source == ignoreCase)
 			{
-				SearchAndReplace.setIgnoreCase(ignoreCase
+				Search.setIgnoreCase(ignoreCase
 					.isSelected());
 			}
 			else if(source == regexp)
 			{
-				SearchAndReplace.setRegexp(regexp
+				Search.setRegexp(regexp
 					.isSelected());
 			}
 			else if (source == wholeWord)
 			{
-				SearchAndReplace.setWholeWord(wholeWord
+				Search.setWholeWord(wholeWord
 					.isSelected());
 			}
 			else if(source == close)

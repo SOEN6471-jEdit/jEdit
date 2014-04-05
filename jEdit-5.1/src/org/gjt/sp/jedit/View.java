@@ -81,7 +81,7 @@ import org.gjt.sp.jedit.msg.SearchSettingsChanged;
 import org.gjt.sp.jedit.msg.ViewUpdate;
 import org.gjt.sp.jedit.options.GeneralOptionPane;
 import org.gjt.sp.jedit.search.CurrentBufferSet;
-import org.gjt.sp.jedit.search.SearchAndReplace;
+import org.gjt.sp.jedit.search.Search;
 import org.gjt.sp.jedit.search.SearchBar;
 import org.gjt.sp.jedit.textarea.JEditTextArea;
 import org.gjt.sp.jedit.textarea.ScrollListener;
@@ -459,8 +459,8 @@ public class View extends JFrame implements InputHandlerProvider
 			else if(text.indexOf('\n') != -1)
 				text = null;
 
-			if(text != null && SearchAndReplace.getRegexp())
-				text = SearchAndReplace.escapeRegexp(text,false);
+			if(text != null && Search.getRegexp())
+				text = Search.escapeRegexp(text,false);
 
 			searchBar.getField().setText(text);
 		}
@@ -489,16 +489,14 @@ public class View extends JFrame implements InputHandlerProvider
 
 			if(text != null && text.indexOf('\n') == -1)
 			{
-				if(SearchAndReplace.getRegexp())
+				if(Search.getRegexp())
 				{
-					text = SearchAndReplace.escapeRegexp(
+					text = Search.escapeRegexp(
 						text,false);
 				}
 
 				HistoryModel.getModel("find").addItem(text);
-				SearchAndReplace.setSearchString(text);
-				SearchAndReplace.setSearchFileSet(new CurrentBufferSet());
-				SearchAndReplace.hyperSearch(this);
+				Search.performHyperSearch(text, new CurrentBufferSet(), this);
 
 				return;
 			}

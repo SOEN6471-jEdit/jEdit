@@ -50,7 +50,7 @@ class HyperSearchRequest extends Task
 		this.matcher = matcher;
 
 		this.results = results;
-		searchString = SearchAndReplace.getSearchString();
+		searchString = Search.getSearchString();
 		rootSearchNode = new DefaultMutableTreeNode(new HyperSearchOperationNode(searchString, matcher));
 
 		this.selection = selection;
@@ -62,7 +62,7 @@ class HyperSearchRequest extends Task
 	{
 		setStatus(jEdit.getProperty("hypersearch-status"));
 
-		SearchFileSet fileset = SearchAndReplace.getSearchFileSet();
+		SearchFileSet fileset = Search.getSearchFileSet();
 		String[] files = fileset.getFiles(view);
 		if(files == null || files.length == 0)
 		{
@@ -84,7 +84,7 @@ class HyperSearchRequest extends Task
 
 		// initially zero, so that we always show the first message
 		String searchingCaption = jEdit.getProperty("hypersearch-results.searching",
-				new String[] { SearchAndReplace.getSearchString() }) + ' ';
+				new String[] { Search.getSearchString() }) + ' ';
 		try
 		{
 			if(selection != null)
@@ -154,7 +154,7 @@ class HyperSearchRequest extends Task
 			{
 				public void run()
 				{
-					SearchAndReplace.handleError(view,e);
+					Search.handleError(view,e);
 				}
 			});
 		}
